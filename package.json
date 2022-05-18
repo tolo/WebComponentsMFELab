@@ -1,0 +1,7 @@
+{
+  "name": "@wcd/tolo.plainjs-l3c52bwh",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve MmVOzvpshosoERPyNXIS --open"
+  }
+}
