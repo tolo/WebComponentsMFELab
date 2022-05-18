@@ -1,3 +1,5 @@
+import { counterChangedEvent } from "./events";
+
 const template = document.createElement("template");
 template.innerHTML = /*html*/`
   <style>
@@ -24,6 +26,8 @@ template.innerHTML = /*html*/`
   <span id="count"></span>
   <button id="inc">+</button>`;
 
+
+
 class MyCounter extends HTMLElement {
   constructor() {
     super();
@@ -40,10 +44,22 @@ class MyCounter extends HTMLElement {
 
   inc() {
     this.update(++this.count);
+    this.dispatchEvent(new CustomEvent(counterChangedEvent, {
+      bubbles: true,
+      detail: {
+        count: this.count, 
+      },
+    }));
   }
 
   dec() {
     this.update(--this.count);
+    this.dispatchEvent(new CustomEvent(counterChangedEvent, {
+      bubbles: true,
+      detail: {
+        count: this.count, 
+      },
+    }));
   }
 
   update(count) {
@@ -51,4 +67,4 @@ class MyCounter extends HTMLElement {
   }
 }
 
-customElements.define("my-counter", MyCounter);
+customElements.define("my-mfe1", MyCounter);
