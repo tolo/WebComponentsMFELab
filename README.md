@@ -6,3 +6,4 @@
 - [W3C Specifications](https://github.com/w3c/webcomponents/)
 - [ShadowDOM](https://developers.google.com/web/fundamentals/web-components/shadowdom)
 - [CustomElements](https://developers.google.com/web/fundamentals/web-components/customelements)
+- [WebComponents (Mozilla)](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
